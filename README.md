@@ -27,7 +27,7 @@ Admin credentials: store_admin@gmail.com / 12345
 
 
 ## Links
-Link to Netlify:  
+Link to Netlify:  https://farm-market.netlify.app
 
 
 ## Installation

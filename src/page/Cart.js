@@ -21,8 +21,8 @@ const Cart = () => {
 
     const handlePayment = async () => {
       if (user.email) {
-        const stripePromise = await loadStripe(process.env.REACT_APP_STRIPE_PUBLIC_KEY)
-        const res = await fetch(`${process.env.REACT_APP_SERVER_DOMAIN}/checkout-payment`, {
+        const stripePromise = await loadStripe("pk_test_51OlHm5LZXpyyH6OIDkYHWALV2on2uppOuepZ6wx5godi6tbxcVIx3nxapTyJ1ijE7AeOiTCFYC3DWa43yCtsfLBE00gfBmSnEx")
+        const res = await fetch(`https://farm-market-backend.onrender.com/checkout-payment`, {
           method: "POST",
           headers: {
             "content-type": "application/json"

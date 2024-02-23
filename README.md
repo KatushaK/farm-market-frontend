@@ -35,7 +35,7 @@ Link to Netlify:
 1. Clone the repository.
 
 ```bash
-git clone https://github.com/your-username/farm-produce-delivery.git
-cd farm-produce-delivery
+git clone https://github.com/KatushaK/farm-market-frontend.git
+cd farm-market-frontend
 
 

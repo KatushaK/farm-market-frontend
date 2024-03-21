@@ -1,27 +1,11 @@
 import React, { useState } from 'react';
 import logo from '../assets/logo.jpg';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link
-} from 'react-router-dom';
-import Home from '../page/Home';
+import { Link } from 'react-router-dom';
 import { FaRegUser } from "react-icons/fa";
 import { GrCart } from "react-icons/gr";
-import Menu from '../page/Menu';
-import About from '../page/About';
-import Contact from '../page/Contact';
-import Login from '../page/Login';
-import Newproduct from '../page/Newproduct';
-import Signup from '../page/Signup';
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutRedux } from '../redux/userSlice';
 import { toast } from 'react-hot-toast';
-import Cart from '../page/Cart';
-import Success from '../page/Success';
-import Cancel from '../page/Cancel';
-
 
 
 const Header = () => {
@@ -41,10 +25,8 @@ const Header = () => {
     const cartItemNumber = useSelector((state) => state.product.cartItem)
 
 
-
     return (
         <header>
-            <Router>
           {/* desktop */}
                 <nav className="nav-desktop">
                     <Link to="/" className="logo"> 
@@ -88,30 +70,12 @@ const Header = () => {
                             {
                                 userData._id ? <p className="logout" onClick={handleLogout}>Logout</p> : <Link to="login" className="user-option">Login</Link>
                             }
-                            </div>
+                        </div>
                     )}
                 </div>
-                
             </nav>
-
-
-
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="menu/:filterby" element={<Menu/>}/>
-                <Route path="about" element={<About />} />
-                <Route path="contact" element={<Contact />} />
-                <Route path="newproduct" element={<Newproduct />} />
-                <Route path="login" element={<Login />} />
-                <Route path="signup" element={<Signup />} />
-                <Route path="cart" element={<Cart />} />
-                <Route path="success" element={<Success/>} />
-                <Route path="cancel" element={<Cancel/>} />
-            </Routes>
-        </Router>
-
-    </header>
-  )
+        </header>
+    )
 }
 
 

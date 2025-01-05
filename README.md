@@ -15,15 +15,31 @@ This full-stack web application allows users to explore and order a variety of f
 - **Admin Functionality:** Admin users can add new products, including image uploads. 
 Admin credentials: store_admin@gmail.com / 12345
 
+- **Stripe Payment Integration:** Secure payment processing using Stripe. Test payment transactions can be made using Stripe's test credit cards.
+
+## Stripe Test Payment Information
+To test the payment system, use the following **Stripe test card numbers**:
+
+**Successful Payment:**  
+  Card Number: `4242 4242 4242 4242`  
+  Expiry: Any future date  
+  CVC: Any 3 digits
+  
+**Failed Payment (Insufficient Funds):**  
+  Card Number: `4000 0000 0000 9995`  
+  Expiry: Any future date  
+  CVC: Any 3 digits
+
+For additional test cards, please refer to Stripe's [official documentation](https://stripe.com/docs/testing).
+
+
 ## Technologies Used
 
 - **Frontend:** React, Redux for state management.
-
 - **Backend:** Node.js, Express, MongoDB for data storage.
-
 - **User Authentication:** JWT (JSON Web Tokens).
-
 - **Notifications:** React Hot Toast.
+- **Payment Processing:** Stripe API.
 
 
 ## Links
